@@ -81,7 +81,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bienvenido a la app Rio Aro
+                    Laravel prueba ruta 
+                    <button type="submit" class="btn btn-primary">prueba boton</button>
                 </div>
 
                 <div class="links">
