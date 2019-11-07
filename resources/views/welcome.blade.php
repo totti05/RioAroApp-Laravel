@@ -1,100 +1,61 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta autor = "Raul">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <!--  bootstrap css -->
+        <link rel="stylesheet" href="{{asset('css\bootstrap.css')}}">
+        
+        <title>Rio Aro App</title>
+       
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Bienvenido a la app Rio Aro
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+       <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<div class="container">
+						<a class="navbar-brand" href="./">
+							<img src="{{asset('img/logo.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+							RioAroApp
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse " id="navbarToggler"  >
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./nosotros">¿Quienes somos?</a>
+								</li>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link " href="./contacto" >Contáctanos</a>
+								</li>
+                                <li class="nav-item">
+									<a class="nav-link " href="./contacto" >Registrarse</a>
+								</li>
+                                <li class="nav-item">
+									<a class="nav-link btn btn-outline-primary " href="./contacto" >Login</a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+			</nav>	
+       </header>     
+       <main>
+           @yield('content')
+        </main>
+        <footer class="bg-dark pb-4 pt-4 text-center text-light" >
+				<div class="container ">
+						<span >Rio Aro App</span>
+				</div>
+		</footer>
+        <!-- scripts -->
+        <script src="{{asset('js/jquery-3.3.1.min.js')}}" ></script>
+		<script src="{{asset('js/popper.js')}}"></script>
+		<script src="{{asset('js/bootstrap.js')}}"></script>
     </body>
 </html>
