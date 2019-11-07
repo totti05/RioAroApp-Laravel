@@ -25,20 +25,20 @@
 						<div class="collapse navbar-collapse " id="navbarToggler"  >
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item active">
-									<a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+									<a class="nav-link" href="{{asset('/')}}">Home <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="./nosotros">¿Quienes somos?</a>
+									<a class="nav-link" href="{{asset('/about')}}">¿Quienes somos?</a>
 								</li>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link " href="./contacto" >Contáctanos</a>
+									<a class="nav-link " href="{{asset('/contact')}}" >Contáctanos</a>
 								</li>
                                 <li class="nav-item">
-									<a class="nav-link " href="./contacto" >Registrarse</a>
+									<a class="nav-link " href="{{asset('/register')}}" >Registrarse</a>
 								</li>
                                 <li class="nav-item">
-									<a class="nav-link btn btn-outline-primary " href="./contacto" >Login</a>
+									<a class="nav-link btn btn-outline-primary " href="{{asset('/login')}}" >Login</a>
 								</li>
 							</ul>
 						</div>
