@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@Index');
-Route::get('/contact', 'HomeController@Contact');
-Route::get('/about', 'HomeController@About');
+Route::get('/', 'LandingController@Index')->name('landing');
+Route::get('/contact', 'LandingController@Contact');
+Route::get('/about', 'LandingController@About');
 
 Auth::routes();
 
