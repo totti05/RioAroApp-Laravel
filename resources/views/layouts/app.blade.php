@@ -23,6 +23,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <img src="{{asset('img/logo.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -54,7 +55,8 @@
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href= "{{route('person.create')}}"> información personal  </a>
+                                    <a class="dropdown-item" href= "{{route('person.create')}}">información personal  </a>
+                                    <a class="dropdown-item" href= "{{route('person.create')}}">Cuenta</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
