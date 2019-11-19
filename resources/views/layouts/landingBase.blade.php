@@ -35,7 +35,7 @@
 									<a class="nav-link " href="{{asset('/contact')}}" >Contáctanos</a>
 								</li>
                                 <li class="nav-item">
-									<a class="nav-link " href="{{asset('/register')}}" >Registrarse</a>
+									<a class="nav-link " href="{{asset('/person/create')}}" >Registrarse</a>
 								</li>
                                 <li class="nav-item">
 									<a class="nav-link btn btn-outline-primary " href="{{asset('/login')}}" >Login</a>
