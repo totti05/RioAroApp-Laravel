@@ -14,12 +14,12 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('Nombre: ') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre: ') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="nombre" autofocus>
 
-                                    @error('nombre')
+                                    @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -28,12 +28,12 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="apellido" class="col-md-4 col-form-label text-md-right">{{ __('apellido') }}</label>
+                                <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Apellido: ') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido">
+                                    <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname">
 
-                                    @error('apellido')
+                                    @error('lastname')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -42,12 +42,12 @@
                             </div>
                                 
                             <div class="form-group row">
-                                <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('cedula') }}</label>
+                                <label for="dni" class="col-md-4 col-form-label text-md-right">{{ __('Cedula: ') }}</label>
                                 
                                 <div class="col-md-6">
-                                    <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula">
+                                    <input id="dni" type="text" class="form-control @error('dni') is-invalid @enderror" name="dni">
 
-                                    @error('cedula')
+                                    @error('dni')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -56,12 +56,12 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="urbanizacion" class="col-md-4 col-form-label text-md-right">{{ __('urbanizacion') }}</label>
+                                <label for="urbanization" class="col-md-4 col-form-label text-md-right">{{ __('Urbanizacion: ') }}</label>
                                 
                                 <div class="col-md-6">
-                                    <input id="urbanizacion" type="text" class="form-control @error('urbanizacion') is-invalid @enderror" name="urbanizacion">
+                                    <input id="urbanization" type="text" class="form-control @error('urbanization') is-invalid @enderror" name="urbanization">
 
-                                    @error('urbanizacion')
+                                    @error('urbanization')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -70,12 +70,12 @@
                             </div>
                             
                             <div class="form-group row">
-                                <label for="manzana" class="col-md-4 col-form-label text-md-right">{{ __('manzana') }}</label>
+                                <label for="street" class="col-md-4 col-form-label text-md-right">{{ __('Manzana: ') }}</label>
                                 
                                 <div class="col-md-6">
-                                    <input id="manzana" type="text" class="form-control @error('manzana') is-invalid @enderror" name="manzana">
+                                    <input id="street" type="text" class="form-control @error('street') is-invalid @enderror" name="street">
 
-                                    @error('manzana')
+                                    @error('street')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -84,12 +84,12 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="casa" class="col-md-4 col-form-label text-md-right">{{ __('casa') }}</label>
+                                <label for="house_number" class="col-md-4 col-form-label text-md-right">{{ __('Casa: ') }}</label>
                                 
                                 <div class="col-md-6">
-                                    <input id="casa" type="text" class="form-control @error('casa') is-invalid @enderror" name="casa">
+                                    <input id="casa" type="text" class="form-control @error('house_number') is-invalid @enderror" name="house_number">
 
-                                    @error('casa')
+                                    @error('house_number')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -98,12 +98,12 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="fecha_nacimiento" class="col-md-4 col-form-label text-md-right">{{ __('fecha de nacimiento') }}</label>
+                                <label for="birthdate" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de nacimiento: ') }}</label>
                                 
                                 <div class="col-md-6">
-                                    <input id="fecha_nacimiento" type="text" class="form-control @error('fecha_nacimiento') is-invalid @enderror" name="fecha_nacimiento">
+                                    <input id="birthdate" type="date" class="form-control @error('birthdate') is-invalid @enderror" name="birthdate">
 
-                                    @error('fecha_nacimiento')
+                                    @error('birthdate')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
