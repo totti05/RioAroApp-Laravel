@@ -44,6 +44,7 @@ class PersonController extends Controller
         $person->house_number = $request->get('house_number');
         $person->birthdate = $request->get('birthdate');
         $person->save();
+        return redirect('/register');
     }
 
     /**
