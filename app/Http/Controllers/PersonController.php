@@ -14,7 +14,7 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        return view('person.index', ['people' => person::all()]);
     }
 
     /**
@@ -35,7 +35,7 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
