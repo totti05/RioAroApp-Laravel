@@ -44,7 +44,7 @@ class PersonController extends Controller
         $person->house_number = $request->get('house_number');
         $person->birthdate = $request->get('birthdate');
         $person->save();
-        return redirect('/register');
+        return view('auth.register', ['person' => $person]);
     }
 
     /**
@@ -55,7 +55,7 @@ class PersonController extends Controller
      */
     public function show(person $person)
     {
-        //
+        dd("$person");
     }
 
     /**
@@ -66,7 +66,7 @@ class PersonController extends Controller
      */
     public function edit(person $person)
     {
-        //
+        return view('person.edit', ['person' => $person]);
     }
 
     /**
@@ -78,7 +78,14 @@ class PersonController extends Controller
      */
     public function update(Request $request, person $person)
     {
-        //
+        $person->name = $request->get('name');
+        $person->lastname = $request->get('lastname');
+        $person->urbanization = $request->get('urbanization');
+        $person->street = $request->get('street');
+        $person->house_number = $request->get('house_number');
+        $person->birthdate = $request->get('birthdate');
+        $person->save();
+        return redirect('/person');
     }
 
     /**
@@ -88,7 +95,8 @@ class PersonController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(person $person)
-    {
-        //
+    {   
+        $person->delete();
+        return redirect('/person');
     }
 }
