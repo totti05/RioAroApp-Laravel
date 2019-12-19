@@ -3,6 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        @isset($activity)
+        <div class="col-md-8">
+            <div class="card">
+            <div class="card-header">
+                {{__('actividad registrada')}}
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{$activity->title}}</h4>
+                <p class="card-text">{{$activity->description}}</p>
+            </div>
+        </div>
+        </div>
+        @endisset
+
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Registrar nueva actividad') }}</div>

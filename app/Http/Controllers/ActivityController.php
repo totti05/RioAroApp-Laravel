@@ -35,7 +35,11 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $activity = new Activity();
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        $activity->save();
+        return view('activity.register', ['activity'=> $activity]);
     }
 
     /**
