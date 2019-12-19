@@ -14,7 +14,8 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        //
+
+        return view('activity.index', ['activities' => activity::all()]);
     }
 
     /**
@@ -61,7 +62,8 @@ class ActivityController extends Controller
      */
     public function edit(Activity $activity)
     {
-        //
+        
+        return view('activity.edit', ['activity' => $activity]);
     }
 
     /**
@@ -73,7 +75,12 @@ class ActivityController extends Controller
      */
     public function update(Request $request, Activity $activity)
     {
-        //
+        
+        $activity = new Activity();
+        $activity->title = $request->title;
+        $activity->description = $request->description;
+        $activity->save();
+        return redirect( route('activity.index') ); 
     }
 
     /**
@@ -84,6 +91,7 @@ class ActivityController extends Controller
      */
     public function destroy(Activity $activity)
     {
-        //
+        $activity->delete();
+        return redirect(route('activity.index'));
     }
 }
