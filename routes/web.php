@@ -19,9 +19,5 @@ Auth::routes(['verify'=> true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
-<<<<<<< HEAD
-Route::resource('/person', 'PersonController');
-=======
 Route::resource('/person', 'PersonController' );
 Route::resource('/activity', 'ActivityController');
->>>>>>> activities
