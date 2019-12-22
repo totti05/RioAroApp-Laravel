@@ -51,7 +51,7 @@ class ActivityController extends Controller
      */
     public function show(Activity $activity)
     {
-        //
+        return view('activity.details', ['activity' => $activity]);
     }
 
     /**
@@ -74,9 +74,7 @@ class ActivityController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Activity $activity)
-    {
-        
-        $activity = new Activity();
+    { 
         $activity->title = $request->title;
         $activity->description = $request->description;
         $activity->save();
