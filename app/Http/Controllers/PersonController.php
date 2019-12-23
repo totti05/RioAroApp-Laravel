@@ -55,7 +55,7 @@ class PersonController extends Controller
      */
     public function show(person $person)
     {
-        dd("$person");
+        return view('person.details', ['person' => $person]);
     }
 
     /**
